@@ -18,8 +18,6 @@ var sqlConfig = {
 var sql = require("mssql");
 var _ = require("underscore");
 
-app.use(express.static(path.join(__dirname, '..', 'public')));
-
 app.get('/', function(req, res){
     res.send("Hi there! Can I help you with transfering data from MSSQL to Mongo db.\n");
 });
