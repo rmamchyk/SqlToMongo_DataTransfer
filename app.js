@@ -4,6 +4,10 @@ path = require('path');
 var express = require('express');
 var app = express();
 
+// Connect to Mongo
+var mongodbConn = require(path.join(__dirname, 'services', 'mongoUtil'));
+mongodbConn.connect();
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 
